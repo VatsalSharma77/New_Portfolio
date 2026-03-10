@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────
+   FONT FACES — self-hosted from /assets/fonts/
+   ─────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque[opsz,wght].woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit[wght].woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ───────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   Direction: Deep navy dark theme — sky-blue primary, green secondary.
+   Modern developer portfolio aesthetic.
+   ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Deep navy background */
+    --background: 0.13 0.022 264;
+    --foreground: 0.975 0.006 255;
+
+    --card: 0.18 0.025 264;
+    --card-foreground: 0.975 0.006 255;
+
+    --popover: 0.18 0.025 264;
+    --popover-foreground: 0.975 0.006 255;
+
+    /* Sky-blue primary (#38BDF8) */
+    --primary: 0.72 0.16 215;
+    --primary-foreground: 0.1 0.02 264;
+
+    /* Green secondary (#22C55E) */
+    --secondary: 0.65 0.18 148;
+    --secondary-foreground: 0.1 0.02 264;
+
+    --muted: 0.22 0.025 264;
+    --muted-foreground: 0.58 0.04 255;
+
+    --accent: 0.72 0.16 215;
+    --accent-foreground: 0.1 0.02 264;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.28 0.03 264;
+    --input: 0.24 0.03 264;
+    --ring: 0.72 0.16 215;
+
+    --chart-1: 0.72 0.16 215;
+    --chart-2: 0.65 0.18 148;
+    --chart-3: 0.62 0.16 55;
+    --chart-4: 0.58 0.18 295;
+    --chart-5: 0.55 0.22 25;
+
+    --sidebar: 0.15 0.022 264;
+    --sidebar-foreground: 0.975 0.006 255;
+    --sidebar-primary: 0.72 0.16 215;
+    --sidebar-primary-foreground: 0.1 0.02 264;
+    --sidebar-accent: 0.65 0.18 148;
+    --sidebar-accent-foreground: 0.1 0.02 264;
+    --sidebar-border: 0.28 0.03 264;
+    --sidebar-ring: 0.72 0.16 215;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Outfit", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .mono {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  ::selection {
+    background: oklch(0.72 0.16 215 / 0.2);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   CUSTOM UTILITIES
+   ─────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Sky-blue to green gradient text */
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.72 0.16 215) 0%,
+      oklch(0.65 0.18 148) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section label with sky-blue accent line */
+  .label-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: oklch(0.72 0.16 215 / 0.8);
+  }
+
+  .label-accent::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: oklch(0.72 0.16 215);
+    border-radius: 1px;
+  }
+
+  /* Thin decorative rule under section titles */
+  .section-rule {
+    width: 2.5rem;
+    height: 3px;
+    background: oklch(0.72 0.16 215);
+    border-radius: 2px;
+    margin-top: 0.75rem;
+  }
+
+  /* Dark glassmorphic navbar */
+  .nav-bg {
+    background: oklch(0.13 0.022 264 / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid oklch(0.28 0.03 264 / 0.8);
+  }
+
+  /* Sky-blue tinted skill tag */
+  .tag-pill {
+    background: oklch(0.22 0.035 215);
+    color: oklch(0.75 0.12 215);
+    border: 1px solid oklch(0.32 0.06 215);
+    font-size: 0.72rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.01em;
+  }
+
+  /* Green accent tag */
+  .tag-green {
+    background: oklch(0.2 0.04 148);
+    color: oklch(0.65 0.15 148);
+    border: 1px solid oklch(0.3 0.07 148);
+    font-size: 0.72rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.01em;
+  }
+
+  /* Skill bar fill */
+  .skill-bar-fill {
+    background: linear-gradient(
+      90deg,
+      oklch(0.72 0.16 215) 0%,
+      oklch(0.65 0.18 148) 100%
+    );
+  }
+
+  /* Timeline vertical line */
+  .timeline-line {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.72 0.16 215 / 0.5),
+      oklch(0.72 0.16 215 / 0.1)
+    );
+  }
+
+  .timeline-dot {
+    background: oklch(0.72 0.16 215);
+  }
+
+  /* Section zebra tint */
+  .bg-section-alt {
+    background: oklch(0.155 0.022 264);
+  }
+
+  /* Hero background blobs */
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  /* Card glow */
+  .card-glow {
+    box-shadow:
+      0 0 0 1px oklch(0.72 0.16 215 / 0.2),
+      0 8px 32px oklch(0.72 0.16 215 / 0.08);
+  }
+
+  .card-glow-hover {
+    box-shadow:
+      0 0 0 1px oklch(0.72 0.16 215 / 0.5),
+      0 12px 40px oklch(0.72 0.16 215 / 0.15);
+  }
+
+  /* Form input focus */
+  .input-focus {
+    @apply outline-none ring-2 ring-primary/20 border-primary;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   SCROLL PROGRESS BAR
+   ─────────────────────────────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.72 0.16 215) 0%, oklch(0.65 0.18 148) 100%);
+  z-index: 9999;
+  transform-origin: left;
+}
