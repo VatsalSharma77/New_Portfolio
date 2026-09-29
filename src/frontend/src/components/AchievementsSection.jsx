@@ -22,6 +22,26 @@ const ACHIEVEMENTS = [
     icon: "💳",
     text: "Integrated subscription billing and Stripe payment flows",
   },
+  {
+    icon: "🏢",
+    text: "Built an enterprise employee portal integrating Microsoft Graph, SharePoint Online, and Azure SQL",
+  },
+  {
+    icon: "☁️",
+    text: "Set up Azure deployments with GitHub Actions CI/CD and Grafana monitoring for reliable releases",
+  },
+  {
+    icon: "🏆",
+    text: "Awarded a scholarship as the top performer of the Masai MERN Stack (CAP) batch",
+  },
+  {
+    icon: "🎖️",
+    text: "Recognized for leadership as Final Year Lead, managing a college-level team",
+  },
+  {
+    icon: "🐍",
+    text: "Completed the Python 100 Days of Code certification (2022)",
+  },
 ];
 
 export function AchievementsSection() {

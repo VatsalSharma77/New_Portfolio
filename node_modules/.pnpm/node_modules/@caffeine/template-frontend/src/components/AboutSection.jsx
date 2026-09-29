@@ -26,7 +26,30 @@ const HIGHLIGHTS = [
     description:
       "Integrated subscription billing, payment gateways, and Stripe payment flows.",
   },
-  
+  {
+    emoji: "🏢",
+    title: "Enterprise Integrations",
+    description:
+      "Connected employee portals to Microsoft Graph and SharePoint Online for directories, documents, and workflows.",
+  },
+  {
+    emoji: "☁️",
+    title: "Azure & CI/CD",
+    description:
+      "Supported Azure Static Web Apps and App Service deployments with automated GitHub Actions pipelines.",
+  },
+  {
+    emoji: "⚡",
+    title: "Performance Tuning",
+    description:
+      "Optimized backend APIs and complex SQL queries, improving response times by 30%.",
+  },
+  {
+    emoji: "📈",
+    title: "Monitoring & Reliability",
+    description:
+      "Used Grafana dashboards, metrics, and logs to spot and resolve performance issues early.",
+  },
 ];
 
 export function AboutSection() {
@@ -69,6 +92,9 @@ export function AboutSection() {
               clean UI experiences, and exploring AI-driven application
               features.
             </p>
+            <p className="text-muted-foreground leading-relaxed text-[0.95rem]">
+              Now working as a Senior Developer at Dataabsolute Technologies, building enterprise portals with React.js, TypeScript, and Node.js on top of Microsoft Graph, SharePoint, and Azure SQL, with Azure deployments, GitHub Actions CI/CD, and Grafana monitoring.
+            </p>
 
             {/* Quick info pills */}
             <div className="flex flex-wrap gap-2 pt-2">
@@ -79,6 +105,9 @@ export function AboutSection() {
                 "PostgreSQL",
                 "MongoDB",
                 "Stripe",
+                "Azure",
+                "Microsoft Graph",
+                "SharePoint",
               ].map((tech) => (
                 <span key={tech} className="tag-pill">
                   {tech}

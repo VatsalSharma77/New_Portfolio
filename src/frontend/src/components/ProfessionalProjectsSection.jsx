@@ -42,11 +42,38 @@ const PROFESSIONAL_PROJECTS = [
     tags: ["TypeScript", "Next.js", "Node.js", "PostgreSQL"],
     confidential: true,
   },
+  {
+    number: "03",
+    title: "Grizzly MEP Employee Portal",
+    subtitle: "Enterprise Intranet & Workflow Portal",
+    description:
+      "A full-stack employee portal that brings employee directories, company content, document libraries, careers, and internal approval workflows into one place, backed by Microsoft 365 data.",
+    features: [
+      "Employee directory and org structure powered by Microsoft Graph API",
+      "Document libraries, news, and careers content managed via SharePoint Online",
+      "Internal approval workflows and career application handling",
+      "Employee authentication and app data on Azure SQL with secure REST APIs",
+      "Azure Static Web Apps / App Service deployment with GitHub Actions CI/CD",
+      "Grafana dashboards for monitoring performance and reliability",
+    ],
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Azure SQL",
+      "SharePoint",
+      "Microsoft Graph",
+      "GitHub Actions",
+    ],
+    confidential: true,
+  },
 ];
 
 const ocidMap = [
   { card: "prof-project.item.1" },
   { card: "prof-project.item.2" },
+  { card: "prof-project.item.3" },
 ];
 
 function ProfessionalProjectCard({ project, index, inView }) {
@@ -162,7 +189,7 @@ export function ProfessionalProjectsSection() {
         </motion.div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mx-auto">
           {PROFESSIONAL_PROJECTS.map((project, i) => (
             <ProfessionalProjectCard
               key={project.title}

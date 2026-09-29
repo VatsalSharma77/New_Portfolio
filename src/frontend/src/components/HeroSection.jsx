@@ -11,6 +11,8 @@ const ROLES = [
   "React Developer",
   "Node.js Developer",
   "Backend Developer",
+  "Senior Developer",
+  "TypeScript Developer",
 ];
 
 function TypewriterText({ texts }) {

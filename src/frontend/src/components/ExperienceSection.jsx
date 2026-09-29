@@ -3,6 +3,31 @@ import { useInView } from "../hooks/useInView";
 
 const EXPERIENCES = [
   {
+    role: "Senior Developer",
+    company: "Dataabsolute Technologies Pvt. Ltd.",
+    duration: "Mar 2026 – Present",
+    type: "Full-time",
+    responsibilities: [
+      "Developed and enhanced the Grizzly MEP Employee Portal, a full-stack app using React.js, TypeScript, Node.js, and Express.js for employee directories, company content, document libraries, careers, and internal approval workflows",
+      "Integrated Microsoft Graph API and SharePoint Online through backend services to manage employee directory data, organizational structures, documents, news, and career applications",
+      "Worked with Azure SQL for employee authentication and application data, building REST APIs and backend services that securely connect frontend workflows with enterprise data sources",
+      "Supported Azure deployments and CI/CD using Azure Static Web Apps, Azure App Service, and GitHub Actions with automated build, testing, and deployment workflows",
+      "Monitored applications and infrastructure with Grafana, building and reviewing dashboards and analyzing metrics and logs to catch performance and operational issues",
+    ],
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Azure SQL",
+      "SharePoint",
+      "Microsoft Graph",
+      "Azure",
+      "GitHub Actions",
+      "Grafana",
+    ],
+  },
+  {
     role: "Full Stack Developer",
     company: "Sogofy Biz Tech Pvt. Ltd.",
     duration: "Aug 2024 – Feb 2026",
@@ -13,6 +38,10 @@ const EXPERIENCES = [
       "Built responsive recruiter dashboards using React.js and Redux",
       "Integrated Stripe payment gateway and OAuth authentication systems",
       "Maintained production deployments and resolved production bugs",
+      "Designed and maintained 100+ database tables, 200+ PostgreSQL functions, and 150+ REST APIs, and improved API response times by 30% through query and backend optimization",
+      "Implemented secure authentication and access control with Google & LinkedIn SSO, OTP-based login, role-based permissions, and subscription-based feature controls",
+      "Integrated automated email workflows, real-time and scheduled notifications, and AI APIs for candidate scoring, skill matching, and interview workflows",
+      "Handled client communication across requirements, delivery, and enhancements",
     ],
     tech: [
       "React.js",
@@ -22,6 +51,8 @@ const EXPERIENCES = [
       "Stripe",
       "Redux",
       "REST APIs",
+      "TypeScript",
+      "AI APIs",
     ],
   },
   {

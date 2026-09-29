@@ -25,6 +25,8 @@ const SKILL_GROUPS = [
       { name: "Express.js", emoji: "🚂" },
       { name: "REST API Design", emoji: "🔌" },
       { name: "JWT Authentication", emoji: "🔐" },
+      { name: "Role-Based Access Control", emoji: "🛡️" },
+      { name: "API Performance Optimization", emoji: "⚡" },
     ],
   },
   {
@@ -35,6 +37,7 @@ const SKILL_GROUPS = [
       { name: "PostgreSQL", emoji: "🐘" },
       { name: "MongoDB", emoji: "🍃" },
       { name: "SQL", emoji: "📊" },
+      { name: "Azure SQL", emoji: "☁️" },
     ],
   },
   {
@@ -47,6 +50,10 @@ const SKILL_GROUPS = [
       { name: "LinkedIn OAuth", emoji: "💼" },
       { name: "NodeMailer", emoji: "📧" },
       { name: "Real-time Notifications", emoji: "🔔" },
+      { name: "Microsoft Graph API", emoji: "🔗" },
+      { name: "SharePoint Online", emoji: "📁" },
+      { name: "AI APIs", emoji: "🤖" },
+      { name: "OTP Login", emoji: "📲" },
     ],
   },
   {
@@ -60,6 +67,20 @@ const SKILL_GROUPS = [
       { name: "pgAdmin", emoji: "🐘" },
       { name: "VS Code", emoji: "💻" },
       { name: "Jira", emoji: "📋" },
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    icon: "◆",
+    color: "text-secondary",
+    skills: [
+      { name: "Microsoft Azure", emoji: "☁️" },
+      { name: "Azure App Service", emoji: "🚀" },
+      { name: "Azure Static Web Apps", emoji: "🌐" },
+      { name: "GitHub Actions", emoji: "⚙️" },
+      { name: "CI/CD", emoji: "🔁" },
+      { name: "Grafana", emoji: "📈" },
+      { name: "Application Insights", emoji: "🔍" },
     ],
   },
 ];

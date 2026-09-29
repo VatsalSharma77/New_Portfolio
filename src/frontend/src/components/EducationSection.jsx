@@ -13,6 +13,7 @@ const EDUCATION = [
       "Intensive training in React, Node.js, Express, and MongoDB",
       "Built multiple full-stack applications using the MERN stack",
       "Learned REST API design, authentication systems, and database architecture",
+      "Awarded a scholarship for being the top performer of the batch (Career Accelerate Program, by Masai)",
     ],
   },
   {
@@ -26,6 +27,7 @@ const EDUCATION = [
       "4-year undergraduate engineering program",
       "Strong foundation in analytical thinking and problem solving",
       "Graduated with CGPA 8.09 / 10",
+      "Recognized for excellence in leadership as Final Year Lead, handling a college-level team",
     ],
   },
 ];
